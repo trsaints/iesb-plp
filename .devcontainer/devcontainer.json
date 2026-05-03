@@ -1,0 +1,21 @@
+{
+	"name": "My DevContainer",
+	"image": "mcr.microsoft.com/vscode/devcontainers/base:latest",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.fontSize": 16,
+				"terminal.integrated.shell.linux": "/bin/zsh",
+				"editor.formatOnSave": true
+			},
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack",
+				"timonwong.shellcheck",
+				"ms-python.python",
+				"bierner.markdown-preview-github-styles",
+				"ms-vsliveshare.vsliveshare",
+				"dracula-theme.theme-dracula"
+			]
+		}
+	}
+}
