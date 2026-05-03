@@ -6,7 +6,9 @@
 			"settings": {
 				"terminal.integrated.fontSize": 16,
 				"terminal.integrated.shell.linux": "/bin/zsh",
-				"editor.formatOnSave": true
+				"editor.formatOnSave": true,
+				"workbench.colorTheme": "dracula",
+				"workbench.iconTheme": "material"
 			},
 			"extensions": [
 				"ms-vscode.cpptools-extension-pack",
@@ -14,7 +16,10 @@
 				"ms-python.python",
 				"bierner.markdown-preview-github-styles",
 				"ms-vsliveshare.vsliveshare",
-				"dracula-theme.theme-dracula"
+				"dracula-theme.theme-dracula",
+				"usernamehw.errorlens",
+				"pkief.material-icon-theme",
+				"editorconfig.editorconfig"
 			]
 		}
 	}
