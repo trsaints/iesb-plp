@@ -7,8 +7,8 @@
 				"terminal.integrated.fontSize": 16,
 				"terminal.integrated.shell.linux": "/bin/zsh",
 				"editor.formatOnSave": true,
-				"workbench.colorTheme": "dracula",
-				"workbench.iconTheme": "material"
+				"workbench.colorTheme": "Dracula Theme",
+				"workbench.iconTheme": "material-icon-theme"
 			},
 			"extensions": [
 				"ms-vscode.cpptools-extension-pack",
