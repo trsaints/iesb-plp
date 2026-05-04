@@ -92,17 +92,21 @@ Rational *divide(Rational a, Rational b)
 
 char *toString(Rational number)
 {
-    char buffer[24];
-
-    bool converted_n = snprintf(buffer, sizeof(buffer), "%d", number.numerator);
-    bool converted_d = snprintf(buffer, sizeof(buffer), "%d", number.denominator);
-
-    if (converted_n != true || converted_d != true)
+    int required = snprintf(NULL, 0, "%d/%d", number.numerator, number.denominator);
+    if (required < 0)
     {
         fprintf(stderr, "[ERRO]: Falha ao serializar struct Rational\n");
         exit(1);
     }
 
+    char *buffer = malloc((size_t)required + 1);
+    if (buffer == NULL)
+    {
+        fprintf(stderr, "[ERRO]: Falha ao alocar memória para string Rational\n");
+        exit(1);
+    }
+
+    snprintf(buffer, (size_t)required + 1, "%d/%d", number.numerator, number.denominator);
     return buffer;
 }
 
