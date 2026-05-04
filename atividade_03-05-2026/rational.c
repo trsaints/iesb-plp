@@ -36,10 +36,10 @@ Rational *create(int numerator, int denominator)
 
     int n = numerator, d = denominator;
 
-    if (n < 0)
+    if (d < 0)
     {
-        n = n * (-1);
-        d = d * (-1);
+        n = -n;
+        d = -d;
     }
 
     int rational_gcd = gcd(n, d);
