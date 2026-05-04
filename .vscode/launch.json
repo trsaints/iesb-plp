@@ -4,7 +4,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.o",
+            "program": "${fileDirname}/program.o",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
