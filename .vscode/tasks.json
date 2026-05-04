@@ -7,9 +7,10 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "*.c",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.o"
+                "${fileDirname}/program.o",
+                "-lm"
             ],
             "options": {
                 "cwd": "${fileDirname}"
