@@ -112,7 +112,7 @@ char *toString(Rational number)
 
 double toDouble(Rational number)
 {
-    return number.numerator / number.denominator;
+    return (double)number.numerator / number.denominator;
 }
 
 int lcm(int a, int b)
