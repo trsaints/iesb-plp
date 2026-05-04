@@ -53,11 +53,11 @@ Rational *create(int numerator, int denominator)
 Rational *add(Rational a, Rational b)
 {
     bool same_denominator = a.denominator == b.denominator;
-    int denominator_lcm = same_denominator ? -1 : lcm(a.denominator, b.denominator);
+    int denominator_lcm = same_denominator ? a.denominator : lcm(a.denominator, b.denominator);
     int n = same_denominator
                 ? a.numerator + b.numerator
-                : (denominator_lcm / a.denominator * a.numerator) + (denominator_lcm / b.denominator * b.denominator);
-    int d = same_denominator ? a.denominator : lcm(a.denominator, b.denominator);
+                : (denominator_lcm / a.denominator * a.numerator) + (denominator_lcm / b.denominator * b.numerator);
+    int d = denominator_lcm;
 
     return create(n, d);
 }
@@ -65,11 +65,11 @@ Rational *add(Rational a, Rational b)
 Rational *subtract(Rational a, Rational b)
 {
     bool same_denominator = a.denominator == b.denominator;
-    int denominator_lcm = same_denominator ? -1 : lcm(a.denominator, b.denominator);
+    int denominator_lcm = same_denominator ? a.denominator : lcm(a.denominator, b.denominator);
     int n = same_denominator
                 ? a.numerator - b.numerator
-                : (denominator_lcm / a.denominator * a.numerator) - (denominator_lcm / b.denominator * b.denominator);
-    int d = same_denominator ? a.denominator : lcm(a.denominator, b.denominator);
+                : (denominator_lcm / a.denominator * a.numerator) - (denominator_lcm / b.denominator * b.numerator);
+    int d = denominator_lcm;
 
     return create(n, d);
 }
