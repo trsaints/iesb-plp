@@ -1,3 +1,6 @@
+#ifndef RATIONAL_H
+#define RATIONAL_H
+
 /**
  * Representa um número racional, no formato de razão (numerador/denominador).
  */
@@ -69,3 +72,5 @@ char *toString(Rational number);
  * @returns um double, representando um número racional em seu formato decimal.
  */
 double toDouble(Rational number);
+
+#endif // RATIONAL_H
