@@ -15,7 +15,7 @@ int main()
     char *r4_string = toString(*r4); // "-3/4"
     double r4_double = toDouble(*r4);
 
-    printf("r3: %s (~%.5lf)\n", r4_string, r4_double);
+    printf("r4: %s (~%.5lf)\n", r4_string, r4_double);
 
     return 0;
 }
